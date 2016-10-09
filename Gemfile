@@ -50,6 +50,18 @@ group :development, :test do
   gem 'guard-rubocop', require: false
   gem 'yard', require: false
   gem 'kramdown'
+  # blackbox testing by faking user interaction
+  gem 'capybara', require: false
+  # poltergeist is a capybara driver to interface with phantomjs
+  gem 'poltergeist', require: false
+  # factories make for better testing models
+  gem 'factory_girl_rails', require: false
+  # automtically generated fake data
+  gem 'faker', require: false
+  # load environment variables from .env immediately
+  gem 'dotenv-rails', require: 'dotenv/rails-now'
+  # code coverage
+  gem 'simplecov', require: false
 end
 
 group :development do
