@@ -28,6 +28,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # devise for user auth
 gem 'devise'
+# I like social logins
+gem 'omniauth'
+gem 'omniauth-google'
+gem 'omniauth-facebook'
 # annotate all the models
 gem 'annotate'
 # I prefer semantic-ui
