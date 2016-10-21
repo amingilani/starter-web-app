@@ -48,6 +48,7 @@ group :development, :test do
   gem 'guard-livereload', require: false
   gem 'guard-rspec', require: false
   gem 'guard-rubocop', require: false
+  # documentation with yard
   gem 'yard', require: false
   gem 'kramdown'
   # blackbox testing by faking user interaction
@@ -71,6 +72,8 @@ group :development do
   # Spring speeds up development by keeping your app running in the background.
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # livereload straight in rack
+  gem 'rack-livereload'
 end
 
 group :production, :staging do
@@ -79,4 +82,4 @@ group :production, :staging do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i(mingw mswin x64_mingw jruby)
