@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 # annotate all the models
 gem 'annotate'
+# I prefer semantic-ui
+gem 'rails-assets-semantic', source: 'https://rails-assets.org'
 
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
