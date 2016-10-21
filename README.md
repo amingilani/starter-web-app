@@ -18,6 +18,7 @@ This is highly opinionated web app starter based on Ruby on Rails
 * Automatically annotated models
 * Semantic UI
 * Config vars in `.env`
+* Markdown documentation powered by Yard
 
 Versions:
 
