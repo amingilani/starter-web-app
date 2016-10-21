@@ -32,6 +32,8 @@ gem 'devise'
 gem 'annotate'
 # I prefer semantic-ui
 gem 'rails-assets-semantic', source: 'https://rails-assets.org'
+# I like global configuration
+gem 'config'
 
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
