@@ -1,0 +1,5 @@
+host:
+  name: example.com
+  port: 80
+devise:
+  mailer: noreply-development@<%= Settings.host.name %>
