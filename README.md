@@ -1,24 +1,31 @@
-# README
+# Starter App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is highly opinionated web app starter based on Ruby on Rails
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+* Rspec tests
+* Simplecov for coverage
+* Guard for easy development
+* Live reload
+* Rubocop
+* HAML templating with haml-lint
+* Devise powered authentication:
+  * **Users:** end users
+  * **Team:** staff and administrators
+* Pundit powered authorization
+* Yard documentation
+* Automatically annotated models
+* Semantic UI
+* Config vars in `.env`
 
-* System dependencies
+Versions:
 
-* Configuration
+* Ruby 2.3
+* Rails 5
 
-* Database creation
+System dependencies:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Postgresql
+* Rubocop
+* Haml Lint
