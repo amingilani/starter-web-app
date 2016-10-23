@@ -1,4 +1,5 @@
-# Starter App
+# <img src="/app/assets/images/logo/logo.png" height="50px" /> Gilani's Starter App
+
 
 This is highly opinionated web app starter based on Ruby on Rails
 
