@@ -3,8 +3,8 @@
     %h2.ui.teal.image.header
       .image= image_tag("logo/logo.png")
       .content
-        %h2 Log-in to your account
-    = form_for(resource, as: resource_name, url: session_path(resource_name) , html: { class: 'ui large form' } ) do |f|
+        %h2 Sign up for an account
+    = form_for(resource, as: resource_name, url: registration_path(resource_name) , html: { class: 'ui large form' } ) do |f|
       .ui.stacked.segment
         .field
           = f.label :email
@@ -16,12 +16,13 @@
           .ui.left.icon.input
             %i.lock.icon
             = f.password_field :password, autocomplete: "off"
-        - if devise_mapping.rememberable?
-          .ui.inline.field
-            = f.check_box :remember_me
-            = f.label :remember_me
+        .field
+          = f.label :password_confirmation, 'Confirm password'
+          .ui.left.icon.input
+            %i.lock.icon
+            = f.password_field :password_confirmation, autocomplete: "off"
         .actions
-          = f.submit "Log in", class: 'ui fluid large teal submit button'
+          = f.submit "Sign up", class: 'ui fluid large teal submit button'
           .ui.error.message
           - flash.each do |key, value|
             %div{:class => "ui negative message"}= value
@@ -37,6 +38,5 @@
         .content
           %p.transition.hidden
             %ul
-              %li= link_to "Forgot your password?", new_password_path(resource_name)
-              %li=  link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name)
-              %li=  link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name)
+              %li= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name)
+              %li= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name)
