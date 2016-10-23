@@ -38,6 +38,8 @@ gem 'annotate'
 gem 'rails-assets-semantic', source: 'https://rails-assets.org'
 # I like global configuration
 gem 'config'
+# authorization
+gem 'pundit'
 
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
