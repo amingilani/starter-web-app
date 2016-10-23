@@ -76,6 +76,8 @@ group :development, :test do
 end
 
 group :development do
+  # favicon generator helper
+  gem 'rails_real_favicon'
   # Access an IRB console on exception pages or by using <%= console %> anywhere
   gem 'web-console'
   gem 'listen', '~> 3.0.5'

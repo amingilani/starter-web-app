@@ -19,6 +19,19 @@ This is highly opinionated web app starter based on Ruby on Rails
 * Semantic UI
 * Config vars in `.env`
 * Markdown documentation powered by Yard
+* Favicon Generator Helper
+
+### Creating a Favicon
+
+This app comes with [Real Favicon Generator](https://realfavicongenerator.net/)
+already integrated. Quick edit:
+
+1. Change the options in `config/favicon.json`
+2. Replace the image in 'app/assets/images/logo/logo.png'
+3. Run `rails generate favicon`
+
+If you've never used Real Favicon Generator, visit the web site and follow the
+steps. Skip the part about editing the Gemfile.
 
 Versions:
 
