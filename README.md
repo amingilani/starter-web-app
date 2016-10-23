@@ -21,6 +21,17 @@ This is highly opinionated web app starter based on Ruby on Rails
 * Markdown documentation powered by Yard
 * Favicon Generator Helper
 
+Versions:
+
+* Ruby 2.3
+* Rails 5
+
+System dependencies:
+
+* Postgresql
+* Rubocop
+* Haml Lint
+
 ### Creating a Favicon
 
 This app comes with [Real Favicon Generator](https://realfavicongenerator.net/)
@@ -33,13 +44,17 @@ already integrated. Quick edit:
 If you've never used Real Favicon Generator, visit the web site and follow the
 steps. Skip the part about editing the Gemfile.
 
-Versions:
+### Assets
 
-* Ruby 2.3
-* Rails 5
+All stylesheets, javascript and font files are precompiled.
 
-System dependencies:
+The application layout loads two stylesheet and two javascript files per page:
 
-* Postgresql
-* Rubocop
-* Haml Lint
+* `global` (via `application`)
+* `controller_name`
+
+The following vendor folders are also precompiled:
+
+* `vendor/assets/javascripts`
+* `vendor/assets/stylesheets`
+* `vendor/assets/fonts`
