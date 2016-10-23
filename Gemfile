@@ -88,7 +88,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # livereload straight in rack
   gem 'rack-livereload'
-  # be a good dev and lint your code
+  # be a good dev and lint your HAML
   gem 'haml_lint'
 end
 
