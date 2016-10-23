@@ -1,7 +1,7 @@
 .ui.middle.aligned.centered.grid
   .column
     %h2.ui.teal.image.header
-      %img.image{:src => "assets/images/logo.png"}/
+      .image= image_tag("logo/logo.png")
       .content
         %h2 Log-in to your account
     = form_for(resource, as: resource_name, url: session_path(resource_name) , html: { class: 'ui large form' } ) do |f|
