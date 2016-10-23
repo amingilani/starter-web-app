@@ -1,37 +1,36 @@
 # <img src="/app/assets/images/logo/logo.png" height="50px" /> Gilani's Starter App
 
 
-This is highly opinionated web app starter based on Ruby on Rails
+This is my highly opinionated web app starter based on Ruby on Rails. I found myself heavily customizing Rails at the start of every project, so I created a starter with everything I like.
 
-## Features
+## Details
 
-* Rspec tests
-* Simplecov for coverage
-* Guard for easy development
-* Live reload
-* Rubocop
-* HAML templating with haml-lint
-* Devise powered authentication:
-  * **Users:** end users
-  * **Team:** staff and administrators
-* Pundit powered authorization
-* Yard documentation
-* Automatically annotated models
-* Semantic UI
-* Config vars in `.env`
-* Markdown documentation powered by Yard
-* Favicon Generator Helper
+### Preconfigured
 
-Versions:
+* [Rspec](http://rspec.info/)
+* [Guard](https://github.com/guard/guard)
+* [HAML](http://haml.info/)
+* [Postgresql](https://www.postgresql.org)
+* [Livereload](https://github.com/johnbintz/rack-livereload)
+* [Simplecov](https://github.com/colszowka/simplecov)
+* [Rubocop](https://github.com/bbatsov/rubocop)
+* [Devise](https://github.com/plataformatec/devise)
+* [Pundit](https://github.com/elabs/pundit)
+* [Yard](http://yardoc.org/)
+* [Annotated Models](https://github.com/ctran/annotate_models)
+* [Semantic UI](http://semantic-ui.com/)
+* [dotenv](https://github.com/bkeepers/dotenv) and [config](https://github.com/railsconfig/config)
+* [Real Favicon Generator](https://realfavicongenerator.net/)
+
+### Versions
 
 * Ruby 2.3
 * Rails 5
+* Bundler `~> 1.13.1`
 
-System dependencies:
+## Dependencies
 
 * Postgresql
-* Rubocop
-* Haml Lint
 
 ### Creating a Favicon
 
