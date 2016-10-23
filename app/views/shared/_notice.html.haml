@@ -1,0 +1,7 @@
+.ui.flash.messages.container
+  - flash.each do |key, value|
+    - unless key == 'timedout' # devise pollutes flash messages. See https://github.com/plataformatec/devise/issues/1777
+      %div{:class => "ui #{message_class_for key} message"}
+        %i.close.icon
+        .header
+        %p= value
