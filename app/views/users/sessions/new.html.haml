@@ -1,0 +1,38 @@
+.ui.middle.aligned.centered.grid
+  .column
+    %h2.ui.teal.image.header
+      %img.image{:src => "assets/images/logo.png"}/
+      .content
+        %h2 Log-in to your account
+    = form_for(resource, as: resource_name, url: session_path(resource_name) , html: { class: 'ui large form' } ) do |f|
+      .ui.stacked.segment
+        .field
+          = f.label :email
+          .ui.left.icon.input
+            %i.user.icon
+            = f.email_field :email, autofocus: true
+        .field
+          = f.label :password
+          .ui.left.icon.input
+            %i.lock.icon
+            = f.password_field :password, autocomplete: "off"
+        - if devise_mapping.rememberable?
+          .ui.inline.field
+            = f.check_box :remember_me
+            = f.label :remember_me
+        .actions
+          = f.submit "Log in", class: 'ui fluid large teal submit button'
+          .ui.error.message
+          - flash.each do |key, value|
+            %div{:class => "ui negative message"}= value
+    .ui.message
+      %strong
+        New to us?
+        %a{:href => new_user_session_path} Sign Up
+      .ui.divider
+      .ui.accordion
+        .title
+          %i.dropdown.icon
+          More Options
+        .content
+          %p.transition.hidden= render "users/shared/links"
