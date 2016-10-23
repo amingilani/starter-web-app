@@ -3,7 +3,7 @@
 
 This is my highly opinionated web app starter based on Ruby on Rails. I found myself heavily customizing Rails at the start of every project, so I created a starter with everything I like.
 
-**[Live Preview](https://gilani-starter.herokuapp.com)**
+**>>> [Live Preview](https://gilani-starter.herokuapp.com) <<<**
 
 ## Details
 
@@ -30,9 +30,13 @@ This is my highly opinionated web app starter based on Ruby on Rails. I found my
 * Rails 5
 * Bundler `~> 1.13.1`
 
-## Dependencies
+### Dependencies
 
 * Postgresql
+
+## Guides
+
+A general list of customizations and information about the application.
 
 ### Creating a Favicon
 
