@@ -4,7 +4,9 @@
     %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Amingilani
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag params[:controller]
+
     = render 'favicon'
   %body
   .pusher
@@ -12,3 +14,4 @@
     = yield
     = render partial: 'shared/footer'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag params[:controller]
