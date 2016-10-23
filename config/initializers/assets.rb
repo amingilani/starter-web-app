@@ -6,5 +6,5 @@ Rails.application.config.assets.version = '1.0'
 # Add font assets to the asset load path
 Rails.application.config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')
 
-# Precompile fonts too
-Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
+# Precompile all javascripts, stylesheets, and fonts
+Rails.application.config.assets.precompile << /\.(?:js|css|svg|eot|woff|ttf)\z/
