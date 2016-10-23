@@ -7,15 +7,10 @@
     = form_for(resource, as: resource_name, url: session_path(resource_name) , html: { class: 'ui large form' } ) do |f|
       .ui.stacked.segment
         .field
-          = f.label :username
+          = f.label :login, 'Username or Email'
           .ui.left.icon.input
             %i.user.icon
-            = f.text_field :username, autofocus: true
-        .field
-          = f.label :email
-          .ui.left.icon.input
-            %i.user.icon
-            = f.email_field :email
+            = f.text_field :login, autofocus: true
         .field
           = f.label :password
           .ui.left.icon.input

@@ -60,6 +60,10 @@ class User < ApplicationRecord
   # virtual attribute
   attr_accessor :login
 
+  def login=(login)
+    @login = login
+  end
+
   # getter for login
   def login
     @login || username || email
@@ -67,12 +71,20 @@ class User < ApplicationRecord
 
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
+    login = conditions.delete(:login)
     if login
-      login = conditions.delete(:login)
       where(conditions.to_h).find_by(['lower(username) = :value OR lower(email) = :value', { value: login.downcase }])
     elsif conditions.key?(:username) || conditions.key?(:email)
       conditions[:email]&.downcase!
       find_by(conditions.to_h)
     end
+  end
+
+  def email_required?
+    false
+  end
+
+  def email_changed?
+    false
   end
 end
