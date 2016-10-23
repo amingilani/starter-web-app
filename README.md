@@ -38,6 +38,10 @@ This is my highly opinionated web app starter based on Ruby on Rails. I found my
 
 A general list of customizations and information about the application.
 
+### Authentication
+
+Registrations accept email addresses and usernames, but a user can sign in with either of them
+
 ### Creating a Favicon
 
 This app comes with [Real Favicon Generator](https://realfavicongenerator.net/)
