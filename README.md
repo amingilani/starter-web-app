@@ -3,6 +3,8 @@
 
 This is my highly opinionated web app starter based on Ruby on Rails. I found myself heavily customizing Rails at the start of every project, so I created a starter with everything I like.
 
+**[Live Preview](https://gilani-starter.herokuapp.com)**
+
 ## Details
 
 ### Preconfigured
