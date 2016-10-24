@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 require 'simplecov'
-require 'coveralls'
-Coveralls.wear!
 SimpleCov.start 'rails'
+if ENV['TRAVIS']
+  require 'coveralls'
+  Coveralls.wear!
+end
