@@ -10,7 +10,11 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    super
+    self.resource = warden.authenticate!(auth_options)
+    set_flash_message!(:notice, :signed_in)
+    sign_in(resource_name, resource)
+    yield resource if block_given?
+    respond_with resource, location: after_sign_in_path_for(resource)
   end
 
   # DELETE /resource/sign_out
@@ -18,7 +22,7 @@ class Users::SessionsController < Devise::SessionsController
   #   super
   # end
 
-  # protected
+  protected
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_in_params
@@ -27,5 +31,9 @@ class Users::SessionsController < Devise::SessionsController
 
   def added_attrs
     %i(username email password remember_me)
+  end
+
+  def after_sign_up_path_for(_resource=nil)
+    dashboard_show_path
   end
 end
