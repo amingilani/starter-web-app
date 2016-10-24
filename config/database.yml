@@ -23,7 +23,7 @@ development:
   <<: *default
   database: amingilani_development
 
-ttest:
+test:
   <<: *default
   # compatible with travis
   database: <%= ENV['TRAVIS'] ? 'travis_ci_test' : 'amingilani_test' %>
