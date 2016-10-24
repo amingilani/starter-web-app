@@ -110,3 +110,15 @@ Style/OpMethod:
 # also they'll fail CI anyway
 Lint/Debugger:
   Enabled: false
+
+##  Devise generated controllers
+
+# I am not rewriting the controllers
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'app/controllers/users/*'
+
+# Devise code is spaghetti like
+Metrics/AbcSize:
+  Exclude:
+    - 'app/controllers/users/*'

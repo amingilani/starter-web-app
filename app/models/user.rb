@@ -60,9 +60,7 @@ class User < ApplicationRecord
   # virtual attribute
   attr_accessor :login
 
-  def login=(login)
-    @login = login
-  end
+  attr_writer :login
 
   # getter for login
   def login

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class ApplicationPolicy
   attr_reader :user, :record
 
@@ -11,7 +12,7 @@ class ApplicationPolicy
   end
 
   def show?
-    scope.where(:id => record.id).exists?
+    scope.where(id: record.id).exists?
   end
 
   def create?
