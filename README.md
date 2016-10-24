@@ -38,6 +38,10 @@ This is my highly opinionated web app starter based on Ruby on Rails. I found my
 
 A general list of customizations and information about the application.
 
+### Setup
+
+Change the hostname and port in `config/settings/$ENVIRONMENT.yml` to your setup
+
 ### Authentication
 
 Registrations accept email addresses and usernames, but a user can sign in with either of them
