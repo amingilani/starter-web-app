@@ -22,3 +22,4 @@ config/environments/*.local.yml
 
 # Ignore spec run states
 spec/examples.txt
+coverage/
