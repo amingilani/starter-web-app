@@ -23,6 +23,7 @@ This is my highly opinionated web app starter based on Ruby on Rails. I found my
 * [Semantic UI](http://semantic-ui.com/)
 * [dotenv](https://github.com/bkeepers/dotenv) and [config](https://github.com/railsconfig/config)
 * [Real Favicon Generator](https://realfavicongenerator.net/)
+* [Travis CI](https://travis-ci.org/) 
 
 ### Versions
 
