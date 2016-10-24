@@ -9,10 +9,11 @@
 
     = render 'favicon'
   %body
-  .pusher
-    = render partial: 'shared/header'
-    = render partial: 'shared/notice'
-    = yield
-    = render partial: 'shared/footer'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag params[:controller]
+    .pusher
+      = render partial: 'shared/header'
+      = render partial: 'shared/notice'
+      .body
+        = yield
+      = render partial: 'shared/footer'
+      = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+      = javascript_include_tag params[:controller]
