@@ -75,6 +75,7 @@ group :development, :test do
   gem 'dotenv-rails', require: 'dotenv/rails-now'
   # code coverage
   gem 'simplecov', require: false
+  gem 'coveralls', require: false
 end
 
 group :development do
