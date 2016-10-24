@@ -17,7 +17,7 @@ Rails.application.configure do
     config.action_mailer.smtp_settings = {
       address: Settings.smtp.address,
       port: 587,
-      username: Settings.smtp.username,
+      user_name: Settings.smtp.username,
       password: Settings.smtp.password
     }
   end
