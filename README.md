@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/amingilani/starter-web-app.svg?branch=master)](https://travis-ci.org/amingilani/starter-web-app) [![Coverage Status](https://coveralls.io/repos/github/amingilani/starter-web-app/badge.svg)](https://coveralls.io/github/amingilani/starter-web-app)
+
 # <img src="/app/assets/images/logo/logo.png" height="50px" /> Gilani's Starter App
 
 
@@ -24,7 +26,7 @@ This is my highly opinionated web app starter based on Ruby on Rails. I found my
 * [dotenv](https://github.com/bkeepers/dotenv) and [config](https://github.com/railsconfig/config)
 * [Real Favicon Generator](https://realfavicongenerator.net/)
 * [Travis CI](https://travis-ci.org/)
-* [Coveralls](https://coveralls.io/) 
+* [Coveralls](https://coveralls.io/)
 
 
 ### Versions
@@ -42,6 +44,16 @@ This is my highly opinionated web app starter based on Ruby on Rails. I found my
 A general list of customizations and information about the application.
 
 ### Setup
+
+#### Renaming
+
+Change the name of the app from `amingilani` in:
+
+* `config/application.rb`
+* `config/initializers/session_store.rb`
+* `config/database.yml`
+
+#### Hostname
 
 Change the hostname and port in `config/settings/$ENVIRONMENT.yml` to your setup
 
