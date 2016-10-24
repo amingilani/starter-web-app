@@ -36,4 +36,8 @@ class Users::SessionsController < Devise::SessionsController
   def after_sign_up_path_for(_resource=nil)
     dashboard_show_path
   end
+
+  def after_sign_out_path_for(_resource=nil)
+    root_path
+  end
 end
