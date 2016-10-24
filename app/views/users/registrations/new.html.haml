@@ -30,7 +30,7 @@
           = f.submit "Sign up", class: 'ui fluid large teal submit button'
           .ui.error.message
           - flash.each do |key, value|
-            %div{:class => "ui negative message"}= value
+            %div{:class => "ui negative message"}= value unless key == 'timedout'
     .ui.message
       %strong
         New to us?

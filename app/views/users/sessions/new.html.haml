@@ -24,7 +24,7 @@
           = f.submit "Log in", class: 'ui fluid large teal submit button'
           .ui.error.message
           - flash.each do |key, value|
-            %div{:class => "ui negative message"}= value
+            %div{:class => "ui negative message"}= value unless key == 'timedout'
     .ui.message
       %strong
         New to us?
@@ -37,6 +37,6 @@
         .content
           %p.transition.hidden
             %ul
-              %li= link_to "Forgot your password?", new_password_path(resource_name)
+              %li=  link_to "Forgot your password?", new_password_path(resource_name)
               %li=  link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name)
               %li=  link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name)
