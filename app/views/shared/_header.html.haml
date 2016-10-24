@@ -13,7 +13,11 @@
         %a.brand.item{href: root_path}= image_tag("logo/logo.png")
         %a.item{href: root_path} Home
         .right.item
-          .item
-            %a.ui.button{href: new_user_session_path} Log in
-          .item
-            %a.ui.green.button{href: new_user_registration_path} Sign Up
+          - if user_signed_in?
+            .item
+              %a.ui.button{href:destroy_user_session_path, 'data-method' => :delete} Log out
+          - else
+            .item
+              %a.ui.button{href: new_user_session_path} Log in
+            .item
+              %a.ui.green.button{href: new_user_registration_path} Sign Up
