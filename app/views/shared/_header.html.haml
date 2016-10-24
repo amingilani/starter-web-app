@@ -1,11 +1,8 @@
 / Sidebar Menu
 .ui.vertical.sidebar.menu
-  %a.active.item Home
-  %a.item Work
-  %a.item Company
-  %a.item Careers
-  %a.item Login
-  %a.item Signup
+  %a.active.item{href: root_path} Home
+  %a.item{href: new_user_session_path} Login
+  %a.item{href: new_user_registration_path} Signup
 / Page Contents
 .pusher
   .ui.vertical.center.aligned.segment
@@ -14,12 +11,9 @@
         %a.toc.item
           %i.sidebar.icon
         %a.brand.item{href: root_path}= image_tag("logo/logo.png")
-        %a.active.item Home
-        %a.item About
-        %a.item Company
-        %a.item Careers
+        %a.item{href: root_path} Home
         .right.item
           .item
             %a.ui.button{href: new_user_session_path} Log in
           .item
-            %a.ui.button{href: new_user_registration_path} Sign Up
+            %a.ui.green.button{href: new_user_registration_path} Sign Up
