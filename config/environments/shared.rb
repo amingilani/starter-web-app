@@ -10,7 +10,15 @@ Rails.application.configure do
     }
   else
     config.action_mailer.default_url_options = {
-      host: Settings.host.name
+      host: Settings.smtp.name
+    }
+  end
+  if Rails.env.production?
+    config.action_mailer.smtp_settings = {
+      address: Settings.smtp.address,
+      port: 587,
+      username: Settings.smtp.username,
+      password: Settings.smtp.password
     }
   end
 end
