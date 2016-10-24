@@ -68,7 +68,7 @@ group :development, :test do
   # poltergeist is a capybara driver to interface with phantomjs
   gem 'poltergeist', require: false
   # factories make for better testing models
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', require: false
   # automtically generated fake data
   gem 'faker', require: false
   # load environment variables from .env immediately
