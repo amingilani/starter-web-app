@@ -38,3 +38,6 @@ $(document)
 $('.ui.accordion')
   .accordion()
 ;
+$('.ui.modal')
+  .modal('attach events', '.delete.my.account.button', 'show')
+;

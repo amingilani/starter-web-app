@@ -15,7 +15,9 @@
         .right.item
           - if user_signed_in?
             .item
-              %a.ui.button{href:destroy_user_session_path, 'data-method' => :delete} Log out
+              %a.ui.button{href: edit_user_registration_path} Settings
+            .item
+              %a.ui.button{href: destroy_user_session_path, 'data-method' => :delete} Log out
           - else
             .item
               %a.ui.button{href: new_user_session_path} Log in

@@ -15,5 +15,6 @@
       .body
         = yield
       = render partial: 'shared/footer'
+      = console
       = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-      = javascript_include_tag params[:controller]
+      = javascript_include_tag params[:controller].split('/').first

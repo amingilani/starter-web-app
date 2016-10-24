@@ -1,0 +1,41 @@
+.ui.container
+  .ui.middle.aligned.centered.three.column.grid
+    .ui.column
+      %h2.ui.green.image.header
+        Account Settings
+      = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'ui form' }) do |f|
+        = devise_error_messages!
+        .field
+          = f.label :username
+          = f.email_field :username, autofocus: true
+        .field
+          = f.label :email
+          = f.email_field :email, autofocus: true
+        - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+          %div
+            Currently waiting confirmation for: #{resource.unconfirmed_email}
+        .field
+          = f.label :password, 'New password'
+          %i (leave blank if you don't want to change it)
+          = f.password_field :password, autocomplete: "off"
+        .field
+          = f.label :password_confirmation, 'Confirm new password'
+          = f.password_field :password_confirmation, autocomplete: "off"
+        .field
+          = f.label :current_password
+          %i (we need your current password to confirm your changes)
+          = f.password_field :current_password, autocomplete: "off"
+        .actions
+          = f.submit "Save", class: 'ui button green'
+          %div.ui.delete.my.account.red.button Delete
+      %h3
+      %p
+      .ui.modal
+        .header Delete my account
+        .content
+          %p
+            Are you sure you want to delete your account? This cannot be undone!
+        .actions
+          -# =button_to "Delete my account",
+          %a.ui.red.button{href: registration_path(resource_name), data: { confirm: "Final warning: are you really sure?", method: :delete }} Delete my account
+          %div.ui.cancel.button Cancel
