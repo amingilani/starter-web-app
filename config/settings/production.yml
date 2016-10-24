@@ -1,6 +1,5 @@
 host:
   name: gilani-starter.herokuapp.com
-  port: 80
 smtp:
   address: <%= ENV['SMTP_HOST'] %>
   port: <%= ENV['SMTP_PORT'] %>
