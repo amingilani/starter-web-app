@@ -47,15 +47,12 @@ A general list of customizations and information about the application.
 
 #### Renaming
 
-Change the name of the app from `amingilani` in:
-
-* `config/application.rb`
-* `config/initializers/session_store.rb`
-* `config/database.yml`
-
-#### Hostname
-
-Change the hostname and port in `config/settings/$ENVIRONMENT.yml` to your setup
+1. Change the name of the app from `amingilani` in:
+    * `config/application.rb`
+    * `config/initializers/session_store.rb`
+    * `config/database.yml`
+2. Change the hostname and port in `config/settings/$ENVIRONMENT.yml` to your setup's url and port
+3. Change the smtp configuration in `config/settings/$ENVIRONMENT.yml` to yours
 
 ### Authentication
 
