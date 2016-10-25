@@ -1,10 +1,33 @@
-%h2 Resend unlock instructions
-= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  .actions
-    = f.submit "Resend unlock instructions"
-= render "users/shared/links"
+.ui.middle.aligned.centered.grid
+  .column
+    %h2.ui.teal.image.header
+      .image= image_tag("logo/logo.png")
+      .content
+        %h2 Unlock your account
+    = form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post, class: 'ui large form'}) do |f|
+      .ui.stacked.segment
+        .field
+          = f.label :email, 'Email'
+          .ui.left.icon.input
+            %i.user.icon
+            = f.email_field :email, autofocus: true
+        .actions
+          = f.submit "Resend unlock email", class: 'ui fluid large teal submit button'
+          .ui.error.message
+          - flash.each do |key, value|
+            %div{:class => "ui negative flash message"}= value unless key == 'timedout'
+    .ui.message
+      %strong
+        %a{:href => new_user_registration_path} Sign up
+        |
+        %a{:href => new_user_session_path} Log in
+      .ui.divider
+      .ui.accordion
+        .title
+          %i.dropdown.icon
+          More Options
+        .content
+          %p.transition.hidden
+            %ul
+              %li=  link_to "Forgot your password?", new_user_password_path
+              %li=  link_to "Didn't receive confirmation instructions?", new_user_confirmation_path
