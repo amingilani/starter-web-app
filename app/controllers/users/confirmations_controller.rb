@@ -1,8 +1,14 @@
 # frozen_string_literal: true
 class Users::ConfirmationsController < Devise::ConfirmationsController
   layout 'user'
+
   # GET /resource/confirmation/new
   def new
+    self.resource = resource_class.new
+  end
+
+  # POST /resource/confirmation
+  def create
     self.resource = resource_class.send_confirmation_instructions(resource_params)
     yield resource if block_given?
     flash[:alert] = resource.errors.full_messages.to_sentence
@@ -13,11 +19,6 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
     end
   end
 
-  # POST /resource/confirmation
-  # def create
-  #   super
-  # end
-
   # GET /resource/confirmation?confirmation_token=abcdef
   def show
     super
@@ -27,7 +28,7 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
 
   # The path used after resending confirmation instructions.
   def after_resending_confirmation_instructions_path_for(_resource_name)
-    new_user_registration_path
+    root_path
   end
 
   # The path used after confirmation.
