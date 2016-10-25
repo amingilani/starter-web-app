@@ -1,0 +1,35 @@
+.ui.middle.aligned.centered.grid
+  .column
+    %h2.ui.teal.image.header
+      .image= image_tag("logo/logo.png")
+      .content
+        %h2 Confirm your account
+    = form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post, class: 'ui large form' }) do |f|
+      .ui.stacked.segment
+        .field
+          = f.label :email, 'Email'
+          .ui.left.icon.input
+            %i.user.icon
+            = f.email_field :email, autofocus: true
+        .actions
+          = f.submit "Resend confirmation email", class: 'ui fluid large teal submit button'
+          .ui.error.message
+          - flash.each do |key, value|
+            %div{:class => "ui negative flash message"}= value unless key == 'timedout'
+    .ui.message
+      %strong
+        %a{:href => new_user_registration_path} Sign up
+        |
+        %a{:href => new_user_session_path} Log in
+      .ui.divider
+      .ui.accordion
+        .title
+          %i.dropdown.icon
+          More Options
+        .content
+          %p.transition.hidden
+            %ul
+              %li=  link_to "Log in", new_user_session_path
+              %li=  link_to "Sign up", new_user_registration_path
+              %li=  link_to "Forgot your password?", new_user_password_path
+              %li=  link_to "Didn't receive unlock instructions?", new_user_unlock_path

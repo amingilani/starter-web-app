@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: {
     sessions: 'users/sessions',
-    registrations: 'users/registrations'
+    registrations: 'users/registrations',
+    unlock: 'users/unlock',
+    confirmations: 'users/confirmations'
   }
   root 'public_pages#home'
 end
