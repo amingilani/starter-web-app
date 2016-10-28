@@ -1,3 +1,2 @@
 host:
-  name: localhost
-  port: 3000
+  host: localhost:3000
